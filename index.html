@@ -532,7 +532,7 @@ function initClient(){
 function requestAuth(then,consent){
   if(!CFG.clientId){toast('Cole seu Client ID em Ajustes primeiro');openSettings();return}
   if(!initClient()){toast('Carregando Google… tente de novo em instantes');return}
-  pendingAfterAuth=then||null;tokenClient.requestAccessToken({prompt:consent?'consent':''});
+  pendingAfterAuth=then||null;tokenClient.requestAccessToken({prompt:consent?'select_account consent':''});
 }
 async function api(path,{method='GET',body}={}){
   if(!tokenValid())throw new Error('auth');
