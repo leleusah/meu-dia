@@ -1,5 +1,5 @@
 // Service worker: deixa o app abrir mesmo sem internet.
-const CACHE = 'meudia-v1';
+const CACHE = 'meudia-v2';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
